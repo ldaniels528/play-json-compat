@@ -1,7 +1,7 @@
 # Play JSON (Java to Scala compatibility)
 ==========================
 
-Inter-mix the Play Frameworks' awesome JsonNode class with Scala code
+Facilitates interoperability between the Play Frameworks' Java and Scala JSON libraries.
 
 ## Motivations
 
@@ -30,8 +30,22 @@ Above I'm reading a Java List from a Data Access Object (e.g. `MyItemDAO`) and a
 to convert the list of items into a JsonNode. Immediately after, I convert the JsonNode (which is not a compatible return
 type for Scala) to a JsValue.
 
-### Building the code
+### Getting the code
 
 ```bash
-sbt package
+git clone https://github.com/ldaniels528/play-json-compat
+```
+
+### Building and using this utility
+
+The easiest way to embed this utility within your Play project is to publish it locally:
+
+```bash
+sbt publish-local
+```
+
+Then within your Play application, add the following line:
+
+```scala
+libraryDependencies += "com.ldaniels528" %% "play-json-compat" % "0.1.0"
 ```
