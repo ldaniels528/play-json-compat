@@ -36,7 +36,7 @@ object JavaJsonCompatibility {
         case jn if jn.isArray => JsArray(jn.elements().toSeq map unfold)
         case jn if jn.isBoolean => JsBoolean(jn.asBoolean())
         case jn if jn.isNull => JsNull
-        case jn if jn.isDouble => JsNumber(jn.asDouble())
+        case jn if jn.isDouble || jn.isFloatingPointNumber => JsNumber(jn.asDouble())
         case jn if jn.isLong => JsNumber(jn.asLong())
         case jn if jn.isInt => JsNumber(jn.asInt())
         case jn if jn.isNumber => JsNumber(jn.asDouble())

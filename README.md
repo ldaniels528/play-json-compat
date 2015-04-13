@@ -1,4 +1,4 @@
-# Play JSON (Java to Scala compatibility)
+Play JSON (Java to Scala compatibility)
 ==========================
 
 Facilitates interoperability between the Play Frameworks' Java and Scala JSON libraries.
