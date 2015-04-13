@@ -44,7 +44,7 @@ The easiest way to embed this utility within your Play project is to publish it 
 sbt publish-local
 ```
 
-Then within your Play application, add the following line:
+Then within your Play application's build.sbt, add the following line:
 
 ```scala
 libraryDependencies += "com.ldaniels528" %% "play-json-compat" % "0.1.0"
